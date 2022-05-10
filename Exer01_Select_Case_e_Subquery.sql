@@ -139,9 +139,10 @@ WHERE codigo IN
 
 SELECT nome , descricao, data, data_final, custo_total
 FROM projects
-WHERE nome like '%Manutenção%' In (
+WHERE nome like '%Manutenção%' In 
+(
 	SELECT data_final
 	FROM users_has_projects
 	WHERE data_final = '16/09/2014'
-	)
 )
+ 
